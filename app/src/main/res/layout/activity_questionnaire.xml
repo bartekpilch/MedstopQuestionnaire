@@ -6,14 +6,24 @@
     android:layout_height="match_parent"
     tools:context=".view.main.QuestionnaireActivity">
 
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:alpha="0.3"
+        android:src="@drawable/ic_launcher_foreground"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
     <TextView
         android:id="@+id/title"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="50dp"
         android:text="Informacja o przetwarzaniu danych osobowych"
-        android:textStyle="bold"
         android:textSize="15sp"
+        android:textStyle="bold"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
@@ -22,7 +32,7 @@
         android:id="@+id/paragraph1"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="50dp"
+        android:layout_marginHorizontal="30dp"
         android:layout_marginTop="40dp"
         android:text="W Medstop przetwarzamy Twoje dane osobowe w następujących celach:"
         app:layout_constraintStart_toStartOf="parent"
@@ -30,61 +40,114 @@
 
     <LinearLayout
         android:id="@+id/targets"
-        android:layout_width="wrap_content"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginStart="70dp"
+        android:layout_marginStart="60dp"
         android:layout_marginTop="10dp"
         android:orientation="vertical"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/paragraph1">
 
-        <TextView
-            android:id="@+id/target1"
+        <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginStart="30dp"
-            android:layout_marginEnd="50dp"
-            android:text="w celach związanych z udzielaniem Ci świadczeń zdrowotnych i prowadzeniem dokumentacji medycznej;"
-            android:textSize="13sp" />
-
-        <TextView
-            android:id="@+id/target2"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginStart="30dp"
+            android:gravity="center"
             android:layout_marginTop="5dp"
-            android:layout_marginEnd="50dp"
-            android:text="w celu realizacji umowy o wykonanie usługi, jaka zawierasz z Administratorem,"
-            android:textSize="13sp" />
+            android:orientation="horizontal">
 
-        <TextView
-            android:id="@+id/target3"
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:padding="5dp"
+                android:layout_gravity="top"
+                android:alpha="0.4"
+                android:src="@drawable/circle" />
+            <TextView
+                android:id="@+id/target1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="50dp"
+                android:text="w celach związanych z udzielaniem Ci świadczeń zdrowotnych i prowadzeniem dokumentacji medycznej;" />
+
+        </LinearLayout>
+
+        <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginStart="30dp"
+            android:gravity="center"
             android:layout_marginTop="5dp"
-            android:layout_marginEnd="50dp"
-            android:text="w celu ochrony przed roszczeniami i w celu dochodzenia roszczeń a także w celu zapewnienia bezpieczeństwa osób i mienia"
-            android:textSize="13sp" />
+            android:orientation="horizontal">
 
-        <TextView
-            android:id="@+id/target4"
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:padding="5dp"
+                android:alpha="0.4"
+                android:src="@drawable/circle" />
+
+            <TextView
+                android:id="@+id/target2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="50dp"
+                android:text="w celu realizacji umowy o wykonanie usługi, jaka zawierasz z Administratorem," />
+
+        </LinearLayout>
+
+        <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginStart="30dp"
+            android:gravity="center"
             android:layout_marginTop="5dp"
-            android:layout_marginEnd="50dp"
-            android:text="w celach marketingowych wyłącznie na podstawie Twojej zgody"
-            android:textSize="13sp" />
+            android:orientation="horizontal">
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:padding="5dp"
+                android:layout_gravity="top"
+                android:alpha="0.4"
+                android:src="@drawable/circle" />
+
+            <TextView
+                android:id="@+id/target3"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="50dp"
+                android:text="w celu ochrony przed roszczeniami i w celu dochodzenia roszczeń a także w celu zapewnienia bezpieczeństwa osób i mienia" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:layout_marginTop="5dp"
+            android:orientation="horizontal">
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:alpha="0.4"
+                android:padding="5dp"
+                android:src="@drawable/circle" />
+
+            <TextView
+                android:id="@+id/target4"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="w celach marketingowych wyłącznie na podstawie Twojej zgody" />
+        </LinearLayout>
+
     </LinearLayout>
 
 
     <LinearLayout
-        android:layout_width="wrap_content"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:layout_marginHorizontal="30dp"
         android:orientation="vertical"
-        android:layout_marginStart="50dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/targets">
@@ -94,31 +157,31 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="10dp"
-            android:layout_marginEnd="50dp"
-            android:text="Administratorem Twoich danych osobowych jest MedStop Bartłomiej Gronowski, 31-202 Kraków, ul. Prądnicka 48 lok. 17, NIP: 9452277756, REGON: 526092905."
-            />
+            android:text="Administratorem Twoich danych osobowych jest MedStop Bartłomiej Gronowski, 31-202 Kraków, ul. Prądnicka 48 lok. 17, NIP: 9452277756, REGON: 526092905." />
 
         <TextView
             android:id="@+id/paragraph3"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:textSize="12sp"
             android:layout_marginTop="10dp"
-            android:layout_marginEnd="50dp"
-            android:text="Przysługuje Ci prawo dostępu do danych osobowych, ich sprostowania, usunięcia lub ograniczenia przetwarzania, a także prawo do wniesienia sprzeciwu wobec przetwarzania oraz prawo do przenoszenia danych. Prawo przenoszenia danych osobowych oraz prawo sprzeciwu wobec przetwarzania danych osobowych nie dotyczą danych przetwarzanych na podstawie art. 9 ust. 2 lit. h RODO tj. danych przetwarzanych w celach zdrowotnych, związanych z udzielaniem Ci świadczeń zdrowotnych, w tym danych zawartych w dokumentacji medycznej."
-            />
+            android:text="Przysługuje Ci prawo dostępu do danych osobowych, ich sprostowania, usunięcia lub ograniczenia przetwarzania, a także prawo do wniesienia sprzeciwu wobec przetwarzania oraz prawo do przenoszenia danych. Prawo przenoszenia danych osobowych oraz prawo sprzeciwu wobec przetwarzania danych osobowych nie dotyczą danych przetwarzanych na podstawie art. 9 ust. 2 lit. h RODO tj. danych przetwarzanych w celach zdrowotnych, związanych z udzielaniem Ci świadczeń zdrowotnych, w tym danych zawartych w dokumentacji medycznej." />
 
         <TextView
             android:id="@+id/paragraph4"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="10dp"
-            android:layout_marginEnd="50dp"
-            android:text="Szczegółowe informacje o zasadach przetwarzania Twoich danych osobowych znajdziesz w recepcji MedStop lub na naszej stronie internetowej https://medstop.pl/polityka prywatnosci"
-            />
-
-
+            android:text="Szczegółowe informacje o zasadach przetwarzania Twoich danych osobowych znajdziesz w recepcji MedStop lub na naszej stronie internetowej https://medstop.pl/polityka prywatnosci" />
     </LinearLayout>
 
+    <ImageView
+        android:id="@+id/next_button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="30dp"
+        android:layout_marginBottom="25dp"
+        android:src="@drawable/next"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

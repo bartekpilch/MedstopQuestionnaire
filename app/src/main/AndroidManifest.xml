@@ -13,6 +13,9 @@
         android:theme="@style/Theme.AppTheme"
         tools:targetApi="31">
         <activity
+            android:name=".view.main.TreatmentCardActivity"
+            android:exported="false" />
+        <activity
             android:name=".view.main.QuestionnaireActivity"
             android:exported="false" />
         <activity
